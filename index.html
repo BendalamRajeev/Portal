@@ -88,7 +88,7 @@
       }
 
       try {
-        const res = await fetch("https://test-api-pozb.onrender.com/upload/", {
+        const res = await fetch("https://test-api-05iz.onrender.com/upload/", {
           method: "POST",
           body: formData
         });
@@ -106,7 +106,7 @@
 
     document.getElementById('downloadBtn').addEventListener('click', async () => {
       try {
-        const res = await fetch("https://test-api-pozb.onrender.com/download/");
+        const res = await fetch("https://test-api-05iz.onrender.com/download/");
         if (!res.ok) throw new Error("Failed to fetch user data");
 
         const data = await res.json();
