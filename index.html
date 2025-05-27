@@ -62,7 +62,7 @@
     <h2>Upload User Data Files</h2>
     <form id="uploadForm">
       <input type="file" id="fileInput" multiple accept=".json, .xls, .xlsx">
-      <button type="submit" class="upload">📤 Upload Files</button>
+      <button type="submit" class="upload">Upload Files</button>
     </form>
     <button id="downloadBtn" class="download">⬇ Download All Users (JSON)</button>
     <div id="response"></div>
@@ -95,12 +95,12 @@
 
         const result = await res.json();
         if (res.ok) {
-          responseBox.textContent = `✅ Upload complete\n📥 Rows inserted: ${result.rows_inserted}\n⏭️ Rows skipped: ${result.rows_skipped}`;
+          responseBox.textContent = `Upload complete\n Rows inserted: ${result.rows_inserted}\n Rows skipped: ${result.rows_skipped}`;
         } else {
-          responseBox.textContent = `❌ Error: ${result.error || 'Upload failed'}`;
+          responseBox.textContent = `Error: ${result.error || 'Upload failed'}`;
         }
       } catch (err) {
-        responseBox.textContent = `❌ Network error: ${err.message}`;
+        responseBox.textContent = `Network error: ${err.message}`;
       }
     });
 
@@ -120,7 +120,7 @@
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
       } catch (err) {
-        alert("❌ Download failed: " + err.message);
+        alert("Download failed: " + err.message);
       }
     });
   </script>
