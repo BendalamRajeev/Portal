@@ -95,7 +95,7 @@
 
         const result = await res.json();
         if (res.ok) {
-          responseBox.textContent = `Upload complete\n Rows inserted: ${result.rows_inserted}\n Rows skipped: ${result.rows_skipped}`;
+          responseBox.textContent = `Upload complete\nRows inserted: ${result.rows_inserted}\nRows skipped: ${result.rows_skipped}`;
         } else {
           responseBox.textContent = `Error: ${result.error || 'Upload failed'}`;
         }
